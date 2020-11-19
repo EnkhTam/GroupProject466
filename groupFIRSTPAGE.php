@@ -28,6 +28,7 @@ E-Mail: <input type = "text" name = "email">
 <!--Enter ID: <input type = 'text' name = 'ID'>-->
 Username: <input type = "text" name = "user_name">
 Password: <input type = "text" name = "pass_word">
+<br><br>
 Confirm Password: <input type = 'text' name = "conpass">
 <br><br>
 First Name: <input type = "text" name = "firstname">
