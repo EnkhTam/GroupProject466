@@ -1,0 +1,58 @@
+body{
+	font-family: arial;
+	background-image:url('bun.gif');
+	background-size: 100%;
+}
+
+h1{
+font-weight: bold;
+}
+
+.login{
+	text-align:center;
+	margin-left: 25%;
+	background-color: #d7efba;
+	border-radius:10px;
+	margin-bottom:10px;
+	width:50%;
+}
+
+
+.register{
+	margin-top:30px;
+	text-align:center;
+	margin-left:5%;
+	width:90%;
+background-color: #f9cce4;
+border-radius:10px;
+}
+.info
+{
+	text-align:center;
+	margin-left: 25%;
+	background-color: #f9cce4;
+	border-radius:10px;
+	margin-bottom:10px;
+	width:50%;
+}
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+li {
+	float: left;
+}
+
+li a {
+	display: block;
+	padding: 8px;
+	background-color: #B0E0E6;
+	text-decoration:none;
+	color:#006400;
+}
+img{
+	width: 91px;
+}
