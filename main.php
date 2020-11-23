@@ -6,8 +6,9 @@
 <body>
 <!--this page is for student specific user account-->
 <ul>
-	<li><a href="groupdisplay.php">Check Your Info</a></li>
-	<li><a href="groupFIRSTPAGE.php">Log Out</a></li>
+	<li><a href='groupdisplay.php'>Check Your Info</a></li>
+	<li><a href='groupfooddisplay.php'>Check Your Food</a></li>
+	<li><a href='groupFIRSTPAGE.php'>Log Out</a></li>
 </ul>
 
 <?php
