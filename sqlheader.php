@@ -23,6 +23,10 @@ else{
 }
 mysqli_select_db($conn,'fitness');
 ///creates the tables for the database
+
+//Putting unit conversion sql in another file just bc there's so much
+include('consql.php');
+
 mysqli_query($conn,"CREATE TABLE user(
 	user_id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 	birth_date DATE NOT NULL,
@@ -39,9 +43,9 @@ mysqli_query($conn,"CREATE TABLE food(
 	food_id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 	food_name VARCHAR(14) NOT NULL,
 	serving_size INT NOT NULL,
-	calories INT NOT NULL,
-	protein INT NOT NULL,
-	carbs INT NOT NULL
+	calories INT,
+	protein INT,
+	carbs INT
 	)");
 mysqli_query($conn, "INSERT INTO food (food_id, food_name, serving_size, calories, protein, carbs)
 		VALUES ('1', 'testfood', '0', '0', '0', '0')");
@@ -60,13 +64,15 @@ mysqli_query($conn, "INSERT INTO foodlogs (flog_id, user_id, food_id, eaten_date
 
 mysqli_query($conn, "CREATE TABLE weightlogs(
 	weight_id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-	user_id INT(11) UNSIGNED,
+	user_id INT(11) UNSIGNED NOT NULL,
 	weight INT NOT NULL,
 	weight_date DATE NOT NULL,
-	FOREIGN KEY (user_id) REFERENCES user (user_id)
+	unit_id INT UNSIGNED NOT NULL,
+	FOREIGN KEY (user_id) REFERENCES user (user_id),
+	FOREIGN KEY (unit_id) REFERENCES measurement_unit (unit_id)
 )");
-mysqli_query($conn, "INSERT INTO weightlogs (weight_id, user_id, weight, weight_date)
-		VALUES ('1','1', '1','2010-01-01')");
+mysqli_query($conn, "INSERT INTO weightlogs (weight_id, user_id, weight, weight_date, unit_id)
+		VALUES ('1','1', '1','2010-01-01','29')");
 
 mysqli_query($conn, "CREATE TABLE workoutlogs(
 	wolog_id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
