@@ -104,18 +104,20 @@ $result = mysqli_query($conn,$sql);
 		$usql = "SELECT user_id FROM user WHERE user_name = '$username'";
 		$uresult = mysqli_query($conn,$usql);
 		$uno = mysqli_fetch_assoc($uresult);
+		$use = $uno['user_id'];
 
-		$prep = mysqli_prepare($conn, "INSERT INTO foodlogs (user_id, food_id, eaten_date, servings)
+		//when using prepare, date doesn't insert correctly
+/*		$prep = mysqli_prepare($conn, "INSERT INTO foodlogs (user_id, food_id, eaten_date, servings)
 					VALUES (?,?,?,?)");
 		mysqli_stmt_bind_param($prep, "iidi", $uno['user_id'], $Ffood_id, $Featen_date, $Fservings);
+*/
 		$Ffood_id = ($_POST["Ffood_id"]);
 		$Featen_date = ($_POST["Featen_date"]);
-		//$Featen_date = date("Y-m-d", strtotime($_POST['Featen_date']));
-		//FIGURE OUT WHY DATE WON'T INSERT CORRECTLY
 		$Fservings = ($_POST["Fservings"]);
-		mysqli_stmt_execute($prep);
-		mysqli_stmt_close($prep);
-		echo "test ".$Featen_date." test";
+//		mysqli_stmt_execute($prep);
+//		mysqli_stmt_close($prep);
+		mysqli_query($conn, "INSERT INTO foodlogs (user_id, food_id, eaten_date, servings)
+					VALUES ('$use','$Ffood_id','$Featen_date','$Fservings')");
 	}
 
 	if(isset($_POST['submitF'])){

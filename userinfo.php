@@ -52,16 +52,18 @@ while($row = mysqli_fetch_array($result))
 		$usql = "SELECT user_id FROM user WHERE user_name = '$username'";
 		$uresult = mysqli_query($conn,$usql);
 		$uno = mysqli_fetch_assoc($uresult);
-
-		$prep = mysqli_prepare($conn, "INSERT INTO weightlogs (user_id, weight, weight_date)
+		$use = $uno['user_id'];
+		//when using prepare, date insert doesn't work
+/*		$prep = mysqli_prepare($conn, "INSERT INTO weightlogs (user_id, weight, weight_date)
 					VALUES (?,?,?)");
 		mysqli_stmt_bind_param($prep, "iid", $uno['user_id'], $Wweight, $Wdate);
+*/
 		$Wweight = ($_POST["Wweight"]);
 		$Wdate = ($_POST["Wdate"]);
-		//$Wdate = date("Y-m-d", strtotime($_POST['Wdate']));
-		//FIGURE OUT WHY DATE WON'T INSERT CORRECTLY
-		mysqli_stmt_execute($prep);
-		mysqli_stmt_close($prep);
+//		mysqli_stmt_execute($prep);
+//		mysqli_stmt_close($prep);
+		mysqli_query($conn, "INSERT INTO weightlogs (user_id, weight, weight_date)
+					VALUES ('$use','$Wweight','$Wdate')");
 	}
 	?>
 

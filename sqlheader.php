@@ -25,23 +25,23 @@ mysqli_select_db($conn,'fitness');
 ///creates the tables for the database
 mysqli_query($conn,"CREATE TABLE user(
 	user_id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-	birth_date DATE,
-	first_name VARCHAR(14),
-	last_name VARCHAR(16),
-	user_name VARCHAR(14),
-	pass_word VARCHAR(16),
-	email VARCHAR(350)
+	birth_date DATE NOT NULL,
+	first_name VARCHAR(14) NOT NULL,
+	last_name VARCHAR(16) NOT NULL,
+	user_name VARCHAR(14) NOT NULL,
+	pass_word VARCHAR(16) NOT NULL,
+	email VARCHAR(350) NOT NULL
 	)");
 mysqli_query($conn, "INSERT INTO user (user_id, birth_date, first_name, last_name, user_name, pass_word, email)
 			VALUES ('1', '2000-01-01', 'test0', 'test0', 'test0','test0','test0')");
 
 mysqli_query($conn,"CREATE TABLE food(
 	food_id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-	food_name VARCHAR(14),
-	serving_size INT,
-	calories INT,
-	protein INT,
-	carbs INT
+	food_name VARCHAR(14) NOT NULL,
+	serving_size INT NOT NULL,
+	calories INT NOT NULL,
+	protein INT NOT NULL,
+	carbs INT NOT NULL
 	)");
 mysqli_query($conn, "INSERT INTO food (food_id, food_name, serving_size, calories, protein, carbs)
 		VALUES ('1', 'testfood', '0', '0', '0', '0')");
@@ -50,8 +50,8 @@ mysqli_query($conn, "CREATE TABLE foodlogs(
 	flog_id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 	user_id INT(11) UNSIGNED,
 	food_id INT(11) UNSIGNED,
-	eaten_date DATE,
-	servings INT,
+	eaten_date DATE NOT NULL,
+	servings INT NOT NULL,
 	FOREIGN KEY (user_id) REFERENCES user (user_id),
 	FOREIGN KEY (food_id) REFERENCES food (food_id)
 	)");
@@ -61,8 +61,8 @@ mysqli_query($conn, "INSERT INTO foodlogs (flog_id, user_id, food_id, eaten_date
 mysqli_query($conn, "CREATE TABLE weightlogs(
 	weight_id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 	user_id INT(11) UNSIGNED,
-	weight INT,
-	weight_date DATE,
+	weight INT NOT NULL,
+	weight_date DATE NOT NULL,
 	FOREIGN KEY (user_id) REFERENCES user (user_id)
 )");
 mysqli_query($conn, "INSERT INTO weightlogs (weight_id, user_id, weight, weight_date)

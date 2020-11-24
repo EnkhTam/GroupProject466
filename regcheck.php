@@ -30,7 +30,8 @@ mysqli_select_db($conn, 'fitness');
 	else{
 		if($pass == $conpass){
 			//if it all matches the account is created
-			mysqli_query($conn, "INSERT INTO user(birth_date, first_name, last_name, user_name, pass_word, email) VALUES ('$birth', '$firstname', '$lastname', '$user', '$pass','$email')");
+			mysqli_query($conn, "INSERT INTO user(birth_date, first_name, last_name, user_name, pass_word, email) 
+			VALUES ('$birth', '$firstname', '$lastname', '$user', '$pass','$email')");
 			//setcookie('type', $usertype);
 			setcookie('firstname',$firstname);
 			header("Location:main.php");

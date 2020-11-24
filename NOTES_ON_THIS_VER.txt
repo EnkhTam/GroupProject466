@@ -1,9 +1,9 @@
 Cleaned up the code a ton and updated, but still not prim and pretty or anything.
 
-Can't figure out why the form dates won't submit correctly. They keep going into the database as 0000-00-00 even though both the database and form seem to use the same yyyy-mm-dd format, which is shown when echoing $Featen_date or $Wdate. This problem didn't exist in the previous version either even tho the date is posted from the form the same way but whatever, hopefully we figure it out
-Also haven't done anything abt unit conversion yet. Havent decided if will add table to db or just do math on-page
-
+Removed use of prepare statements, otherwise dates would submit as 0000-00-00 despite being submitted the same format as the db
 Food log table shows nutrition info of servings consumed by doing math on-page
+
+Also haven't done anything abt unit conversion yet. Havent decided if will add table to db or just do math on-page
 
 Still configured for phpmyadmin, so change the config file to use on mariadb or whatever you want
 See sqlheader.php for current database and table usage/creation
