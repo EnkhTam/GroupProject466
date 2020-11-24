@@ -21,7 +21,7 @@ include('config.php');
 $user = $_COOKIE['firstname'];
 $username = $_COOKIE['username'];
 setcookie('firstname', $user);
-echo "<h1>Welcome $user</h1>";
+echo "<h1>Welcome, $user</h1>";
 mysqli_select_db($conn, "fitness");
 //displays the link bar
 echo "<ul>

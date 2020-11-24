@@ -40,13 +40,18 @@ $sql = "SELECT * FROM foodlogs
 $result = mysqli_query($conn,$sql);
 ?>
 	<div class = "body">
+	<h2>Your Food Logs</h2>
 	<?php
 	echo 'Logs between: <input name="min" id="min" type="text"> and <input name="max" id="max" type="text">';
 	$table = "<table id = 'table1'>";
 	$table.="<thead><tr><th>Date Eaten</th><th>Name</th><th>Servings</th><th>Calories</th><th>Protein</th><th>Carbs</th></tr></thead><tbody>";
 	while($row = mysqli_fetch_assoc($result))
 	{
-		$table .= "<tr> <td>".$row['eaten_date']."</td> <td>".$row['food_name']."</td><td>".$row['servings']."</td> <td>".$row['calories']."</td><td>".$row['protein']."</td><td>".$row['carbs']."</td> </tr>";
+		//show nutrition info for amount consumed, not for one serving size
+		$cals = $row['calories'] * $row['servings'];
+		$prot = $row['protein'] * $row['servings'];
+		$carbs = $row['carbs'] * $row['servings'];
+		$table .= "<tr> <td>".$row['eaten_date']."</td> <td>".$row['food_name']."</td><td>".$row['servings']."</td> <td>".$cals."</td><td>".$prot."</td><td>".$carbs."</td> </tr>";
 	}
 	$table .= "</tbody></table>";
 	echo $table;
@@ -55,7 +60,7 @@ $result = mysqli_query($conn,$sql);
 
 	<div class = "addflog">
 	<form action = "" method = "post">
-	<h1>Add Food Log</h1>
+	<h2>Add Food Log</h2>
 	Food Name: 
 	<?php
 	$fsql = mysqli_query($conn, "SELECT food_id, food_name FROM food");
@@ -77,7 +82,7 @@ $result = mysqli_query($conn,$sql);
 
 	<div class = "addf">
 	<form action = "" method = "post">
-	<h1>Add New Food</h1>
+	<h2>Add New Food</h2>
 	Food Name: <input type = "text" name = "Dfood_name" required>
 	<br>
 	Calories: <input type = "number" name = "Dcalories" required>
