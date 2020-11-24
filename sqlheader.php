@@ -43,12 +43,14 @@ mysqli_query($conn,"CREATE TABLE food(
 	food_id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 	food_name VARCHAR(14) NOT NULL,
 	serving_size INT NOT NULL,
+	serving_unit_id INT UNSIGNED NOT NULL,
 	calories INT,
 	protein INT,
-	carbs INT
+	carbs INT,
+	FOREIGN KEY (serving_unit_id) REFERENCES measurement_unit (unit_id)
 	)");
-mysqli_query($conn, "INSERT INTO food (food_id, food_name, serving_size, calories, protein, carbs)
-		VALUES ('1', 'testfood', '0', '0', '0', '0')");
+mysqli_query($conn, "INSERT INTO food (food_id, food_name, serving_size, serving_unit_id, calories, protein, carbs)
+		VALUES ('1', 'testfood', '0', '30', '0', '0', '0')");
 
 mysqli_query($conn, "CREATE TABLE foodlogs(
 	flog_id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,

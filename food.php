@@ -55,8 +55,55 @@ $result = mysqli_query($conn,$sql);
 	}
 	$table .= "</tbody></table>";
 	echo $table;
+	echo "</div>";
+
+	if(isset($_POST['submitL'])){
+		$usql = "SELECT user_id FROM user WHERE user_name = '$username'";
+		$uresult = mysqli_query($conn,$usql);
+		$uno = mysqli_fetch_assoc($uresult);
+		$use = $uno['user_id'];
+
+		//when using prepare, date doesn't insert correctly
+/*		$prep = mysqli_prepare($conn, "INSERT INTO foodlogs (user_id, food_id, eaten_date, servings)
+					VALUES (?,?,?,?)");
+		mysqli_stmt_bind_param($prep, "iidi", $uno['user_id'], $Ffood_id, $Featen_date, $Fservings);
+*/
+		$Ffood_id = ($_POST["Ffood_id"]);
+		$Featen_date = ($_POST["Featen_date"]);
+		$Fservings = ($_POST["Fservings"]);
+//		mysqli_stmt_execute($prep);
+//		mysqli_stmt_close($prep);
+		mysqli_query($conn, "INSERT INTO foodlogs (user_id, food_id, eaten_date, servings)
+					VALUES ('$use','$Ffood_id','$Featen_date','$Fservings')");
+		header("Location:food.php");
+	}
+
+	if(isset($_POST['submitF'])){
+		$Dfood_name = ($_POST["Dfood_name"]);
+		$checkfood = mysqli_query($conn, "SELECT * from food where food_name = '$Dfood_name' ");
+		if(mysqli_num_rows($checkfood) == true){
+			$message = "Food name already exists";
+			echo "<script> alert('$message')</script>";
+		}
+		else{
+/*			$prep = mysqli_prepare($conn, "INSERT INTO food (food_name, serving_size, calories, protein, carbs)
+						VALUES (?,?,?,?,?)");
+			mysqli_stmt_bind_param($prep, "siiii", $Dfood_name, $Dserving_size, $Dcalories, $Dprotein, $Dcarbs);
+*/			
+			$Dfood_name = ($_POST["Dfood_name"]);
+			$Dserving_size = ($_POST["Dserving_size"]);
+			$Dcalories = ($_POST["Dcalories"]);
+			$Dprotein = ($_POST["Dprotein"]);
+			$Dcarbs = ($_POST["Dcarbs"]);
+			$Munit = ($_POST["Munit"]);
+//			mysqli_stmt_execute($prep);
+//			mysqli_stmt_close($prep);
+			mysqli_query($conn, "INSERT INTO food (food_name, serving_size, serving_unit_id, calories, protein, carbs)
+						VALUES ('$Dfood_name','$Dserving_size', '$Munit','$Dcalories','$Dprotein','$Dcarbs')");
+			header("Location:food.php");
+		}
+	}
 	?>
-	</div>
 
 	<div class = "addflog">
 	<form action = "" method = "post">
@@ -92,60 +139,20 @@ $result = mysqli_query($conn,$sql);
 	Carbs: <input type = "number" name = "Dcarbs" required>
 	<br>
 	Serving Size: <input type = "number" name = "Dserving_size" required>
+	<?php
+	$msql = mysqli_query($conn, "SELECT unit_id, unit_sym FROM measurement_unit");
+	echo "<select name ='Munit'>";
+	while($mrow = mysqli_fetch_assoc($msql)){
+		echo "<option value='".$mrow['unit_id']."'>".$mrow['unit_sym']."</option>";
+	}
+	echo "</select>";
+	?>
 	<br>
 	<input type="submit" name = "submitF" value="submit">
 	<input type = "reset" value = "reset">
 	<br>
 	</form>
 	</div>
-
-	<?php
-	if(isset($_POST['submitL'])){
-		$usql = "SELECT user_id FROM user WHERE user_name = '$username'";
-		$uresult = mysqli_query($conn,$usql);
-		$uno = mysqli_fetch_assoc($uresult);
-		$use = $uno['user_id'];
-
-		//when using prepare, date doesn't insert correctly
-/*		$prep = mysqli_prepare($conn, "INSERT INTO foodlogs (user_id, food_id, eaten_date, servings)
-					VALUES (?,?,?,?)");
-		mysqli_stmt_bind_param($prep, "iidi", $uno['user_id'], $Ffood_id, $Featen_date, $Fservings);
-*/
-		$Ffood_id = ($_POST["Ffood_id"]);
-		$Featen_date = ($_POST["Featen_date"]);
-		$Fservings = ($_POST["Fservings"]);
-//		mysqli_stmt_execute($prep);
-//		mysqli_stmt_close($prep);
-		mysqli_query($conn, "INSERT INTO foodlogs (user_id, food_id, eaten_date, servings)
-					VALUES ('$use','$Ffood_id','$Featen_date','$Fservings')");
-		header("Location:food.php");
-	}
-
-	if(isset($_POST['submitF'])){
-		$Dfood_name = ($_POST["Dfood_name"]);
-		$checkfood = mysqli_query($conn, "SELECT * from food where food_name = '$Dfood_name' ");
-		if(mysqli_num_rows($checkfood) == true){
-			$message = "Food name already exists";
-			echo "<p>$message</p><br>";
-		}
-		else{
-/*			$prep = mysqli_prepare($conn, "INSERT INTO food (food_name, serving_size, calories, protein, carbs)
-						VALUES (?,?,?,?,?)");
-			mysqli_stmt_bind_param($prep, "siiii", $Dfood_name, $Dserving_size, $Dcalories, $Dprotein, $Dcarbs);
-*/			
-			$Dfood_name = ($_POST["Dfood_name"]);
-			$Dserving_size = ($_POST["Dserving_size"]);
-			$Dcalories = ($_POST["Dcalories"]);
-			$Dprotein = ($_POST["Dprotein"]);
-			$Dcarbs = ($_POST["Dcarbs"]);
-//			mysqli_stmt_execute($prep);
-//			mysqli_stmt_close($prep);
-			mysqli_query($conn, "INSERT INTO food (food_name, serving_size, calories, protein, carbs)
-						VALUES ('$Dfood_name','$Dserving_size','$Dcalories','$Dprotein','$Dcarbs')");
-			header("Location:food.php");
-		}
-	}
-	?>
 </form>
 </body>
 </html>
