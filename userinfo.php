@@ -5,10 +5,10 @@
 <link rel= "stylesheet" type = "text/css" href = "custom.css">
 </head>
 <body>
+<?php include('header.php'); ?>
 <center>
 <?php
 //the purpose of this page is an addition so that the user can see if their information is right
-include('header.php');
 
 echo'<div class = "row">
 <div class = "col-md-6">';

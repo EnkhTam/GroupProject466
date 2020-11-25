@@ -11,6 +11,8 @@
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
 <script src="https://cdn.datatables.net/plug-ins/1.10.21/api/sum().js"></script>
 <link rel= "stylesheet" type = "text/css" href = "custom.css">
+<link rel = "icon" href="cursor.gif">
+
 </head>
 
 <body>

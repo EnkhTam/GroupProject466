@@ -3,6 +3,7 @@
 <head>
 <title>Greetings, Traveler</title>
 <link rel= "stylesheet" type = "text/css" href = "custom.css">
+<link rel = "icon" href="cursor.gif">
 <style>
 .indexbody{
 	background-image: url("https://data.whicdn.com/images/321306780/original.gif");

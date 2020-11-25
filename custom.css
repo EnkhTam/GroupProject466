@@ -1,6 +1,9 @@
-﻿
+﻿html {
+    cursor: url("cursor.gif"), auto;
+}
 h1, h2, h4 {
     font-weight: bold;
+    cursor: url("cursor.gif"), auto;
 }
 
 .top {
@@ -10,6 +13,7 @@ h1, h2, h4 {
     background-position-y: 10%;
     background-repeat: no-repeat;
     height: 160px;
+    cursor: url("cursor.gif"), auto;
 }
 
 .welcome {
@@ -19,52 +23,63 @@ h1, h2, h4 {
     -webkit-filter: invert();
 }
 
+.navbar-inverse {
+    cursor: url("cursor.gif"), auto;
+}
+
 
 .collapse.navbar-collapse {
     background-image: url("https://i.pinimg.com/originals/ef/37/57/ef375738b5d3cc1bd9216f86c58148a9.gif");
     background-position: center;
+    cursor: url("cursor.gif"), auto;
 }
 
 .nav.navbar-nav li a, .glyphicon {
     color: white;
+    cursor: url("cursor.gif"), auto;
 }
 
-.nav.navbar-nav li a:hover, .glyphicon:hover {
-    color: lightpink;
-}
+    .nav.navbar-nav li a:hover, .glyphicon:hover {
+        color: lightpink;
+        cursor: url("cursor.gif"), auto;
+    }
 
-.login{
+.login {
     text-align: center;
     background: url("https://i.pinimg.com/originals/91/34/9a/91349a8fb89a757e282d0be4e1868cbf.gif");
     background-size: 200%;
     background-position-y: 20%;
-    background-position-x:50%;
+    background-position-x: 50%;
     border-radius: 10px;
     margin-bottom: 10px;
     width: 45%;
     color: darkslategrey;
     font-weight: bold;
+    cursor: url("cursor.gif"), auto;
 }
     .login input {
         color: darkslategrey;
         font-weight: bold;
+        cursor: url("cursor.gif"), auto;
     }
 
 
-.register{
+.register {
     margin-top: 30px;
     text-align: center;
     width: 90%;
     background: url("https://i.pinimg.com/originals/91/34/9a/91349a8fb89a757e282d0be4e1868cbf.gif");
-    background-size:100%;
-    background-position-y:80%;
+    background-size: 100%;
+    background-position-y: 80%;
     border-radius: 10px;
-    color:lightgrey;
-    font-weight:bold;
+    color: lightgrey;
+    font-weight: bold;
+    cursor: url("cursor.gif"), auto;
 }
     .register input {
         color: lightgrey;
         font-weight: bold;
+        cursor: url("cursor.gif"), auto;
     }
 
 .add form, .info, .add, .log, table, tbody, tr, thead, tfooter {
@@ -78,12 +93,15 @@ h1, h2, h4 {
     background-position: center;
     background-position-y: 80%;
     font-weight: bold;
+    cursor: url("cursor.gif"), auto;
 }
-.add form{
-    background-repeat:no-repeat;
-}
-.add{
-    background:transparent;
+    .add form {
+        background-repeat: no-repeat;
+        cursor: url("cursor.gif"), auto;
+    }
+.add {
+    background: transparent;
+    cursor: url("cursor.gif"), auto;
 }
 
     .info label, .info h2, .info h4, .add label, .add h2, .log label, .log h2, .add form select, .add form input, th, td {
@@ -92,25 +110,29 @@ h1, h2, h4 {
         color: transparent;
         -webkit-filter: invert();
         font-weight: bold;
+        cursor: url("cursor.gif"), auto;
     }
 
         input, select, .add form select option {
             background: inherit;
             color: black;
             font-weight: bold;
+            cursor: url("cursor.gif"), auto;
         }
 
-    ul {
+ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
+    cursor: url("cursor.gif"), auto;
 }
 
 body {
     background: url("https://i.pinimg.com/originals/6e/b4/ac/6eb4ac426bd7a0d441b53344550bc7f0.gif");
     background-position-x: center;
-    background-position-y:100%;
+    background-position-y: 100%;
     background-attachment: fixed;
     font-family: arial;
+    cursor: url("cursor.gif"), auto;
 }
