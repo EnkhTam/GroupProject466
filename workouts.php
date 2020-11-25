@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>Nah I'm too lazy for this</title>
 <?php include('header.php'); ?>
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
 <script>
@@ -72,6 +73,7 @@
 </script>
 </head>
 <body>
+<center>
 <?php
 	if(isset($_POST['submit'])){
 		$usql = "SELECT user_id FROM user WHERE user_name = '$username'";
@@ -100,9 +102,10 @@ $sql = "SELECT * FROM workoutlogs
 $result = mysqli_query($conn,$sql);
 ?>
 	<div class = "body">
+	<div class = "log">
 	<h2>Your Food Logs</h2>
 	<?php
-	echo 'Logs between: <input name="min" id="min" type="text"> and <input name="max" id="max" type="text">';
+echo '<label>Logs between: </label><input name="min" id="min" type="text"><label> and </label><input name="max" id="max" type="text">';
 	$table = "<table id = 'table1'>";
 	$table.="<thead><tr><th>Date Done</th><th>Type</th><th>Calories Burned</th></tr></thead><tbody>";
 	while($row = mysqli_fetch_assoc($result))
@@ -118,17 +121,17 @@ $result = mysqli_query($conn,$sql);
 			</tr>
 			</tfoot></table>";
 	echo $table;
-?>
+?>	</div>
 	</div>
 
-	<div class = "addwlog">
+	<div class = "add">
 	<form action = "" method = "post">
 	<h2>Add Workout Log</h2>
-	Workout Type: <input type = "text" name = "WO_name" required>
+	<label>Workout Type: </label><input type = "text" name = "WO_name" required>
 	<br>
-	Date Done: <input type = "date" name = "WO_date" required>
+	<label>Date Done: </label><input type = "date" name = "WO_date" required>
 	<br>
-	Calories Burned: <input type = "number" name = "WO_cals" required>
+	<label>Calories Burned: </label><input type = "number" name = "WO_cals" required>
 	<br>
 	<input type="submit" name = "submit" value="submit">
 	<input type = "reset" value = "reset">

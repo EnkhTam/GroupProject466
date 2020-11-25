@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>Greetings, Traveler</title>
 <link rel= "stylesheet" type = "text/css" href = "custom.css">
 </head>
 
 <body>
+<center>
 <?php include('sqlheader.php');?>
 
 <div class = "login">

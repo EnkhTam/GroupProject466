@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>I am suddenly hungry</title>
 <?php include('header.php'); ?>
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
 <script>
@@ -32,6 +33,7 @@
 </script>
 </head>
 <body>
+<center>
 <?php 
 $sql = "SELECT * FROM foodlogs 
 		JOIN food ON foodlogs.food_id = food.food_id
@@ -40,9 +42,10 @@ $sql = "SELECT * FROM foodlogs
 $result = mysqli_query($conn,$sql);
 ?>
 	<div class = "body">
+	<div class = "log">
 	<h2>Your Food Logs</h2>
 	<?php
-	echo 'Logs between: <input name="min" id="min" type="text"> and <input name="max" id="max" type="text">';
+	echo '<label>Logs between: </label><input name="min" id="min" type="text"><label> and </label><input name="max" id="max" type="text">';
 	$table = "<table id = 'table1'>";
 	$table.="<thead><tr><th>Date Eaten</th><th>Name</th><th>Servings</th><th>Calories</th><th>Protein</th><th>Carbs</th></tr></thead><tbody>";
 	while($row = mysqli_fetch_assoc($result))
@@ -55,7 +58,7 @@ $result = mysqli_query($conn,$sql);
 	}
 	$table .= "</tbody></table>";
 	echo $table;
-	echo "</div>";
+	echo "</div></div>";
 
 	if(isset($_POST['submitL'])){
 		$usql = "SELECT user_id FROM user WHERE user_name = '$username'";
@@ -104,11 +107,12 @@ $result = mysqli_query($conn,$sql);
 		}
 	}
 	?>
-
-	<div class = "addflog">
+<div class = "row">
+	<div class ="col-lg-6">
+	<div class = "add">
 	<form action = "" method = "post">
 	<h2>Add Food Log</h2>
-	Food Name: 
+	<label>Food Name: </label>
 	<?php
 	$fsql = mysqli_query($conn, "SELECT food_id, food_name FROM food");
 	echo "<select name ='Ffood_id'>";
@@ -118,27 +122,29 @@ $result = mysqli_query($conn,$sql);
 	echo "</select>";
 	?>
 	<br>
-	Date Eaten: <input type = "date" name = "Featen_date" required>
+	<label>Date Eaten: </label><input type = "date" name = "Featen_date" required>
 	<br>
-	Servings Eaten: <input type = "number" name = "Fservings" required>
+	<label>Servings Eaten: </label><input type = "number" name = "Fservings" required>
 	<br>
 	<input type="submit" name = "submitL" value="submit">
 	<input type = "reset" value = "reset">
 	</form>
 	</div>
+	</div>
 
-	<div class = "addf">
+	<div class ="col-lg-6">
+	<div class = "add">
 	<form action = "" method = "post">
 	<h2>Add New Food</h2>
-	Food Name: <input type = "text" name = "Dfood_name" required>
+	<label>Food Name: </label><input type = "text" name = "Dfood_name" required>
 	<br>
-	Calories: <input type = "number" name = "Dcalories" required>
+	<label>Calories: </label><input type = "number" name = "Dcalories" required>
 	<br>
-	Protein: <input type = "number" name = "Dprotein" required>
+	<label>Protein: </label><input type = "number" name = "Dprotein" required>
 	<br>
-	Carbs: <input type = "number" name = "Dcarbs" required>
+	<label>Carbs: </label><input type = "number" name = "Dcarbs" required>
 	<br>
-	Serving Size: <input type = "number" name = "Dserving_size" required>
+	<label>Serving Size: </label><input type = "number" name = "Dserving_size" required>
 	<?php
 	$msql = mysqli_query($conn, "SELECT unit_id, unit_sym FROM measurement_unit");
 	echo "<select name ='Munit'>";
@@ -153,6 +159,8 @@ $result = mysqli_query($conn,$sql);
 	<br>
 	</form>
 	</div>
+	</div>
+</div>
 </form>
 </body>
 </html>

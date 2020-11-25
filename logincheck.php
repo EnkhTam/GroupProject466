@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 <html>
+<head>
+<title>You donked up</title>
+<link rel= "stylesheet" type = "text/css" href = "custom.css">
+<style>
+    h2 {
+        color: lightgrey;
+        font-weight: bold;
+    }
+</style>
+</head>
 <body>
 <?php
 include('config.php');
@@ -23,7 +33,7 @@ if (mysqli_num_rows($checkuser) == true){
 		else{
 			//error message is released
 			$message = "Incorrect Password";
-			echo "<p>Incorrect password</p><br>
+			echo "<h2>Incorrect password</h2><br>
 			<a href = 'index.php'>Go Back</a>";
 		}
 	}
@@ -31,7 +41,7 @@ if (mysqli_num_rows($checkuser) == true){
 else{
 	//gives an error if the user cannot be found
 	$message = "User does not exist, please register if you have not.";
-	echo "<p>$message</p><br>
+	echo "<h2>$message</h2><br>
 	<a href = 'index.php'>Go Back</a>";
 }
 

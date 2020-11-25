@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 <html>
+<head>
+<title>You donked up</title>
+<link rel= "stylesheet" type = "text/css" href = "custom.css">
+<style>
+    h2 {
+        color: lightgrey;
+        font-weight: bold;
+    }
+</style>
+</head>
 <body>
 <?php
 include('config.php');
@@ -18,13 +28,13 @@ mysqli_select_db($conn, 'fitness');
 	if (mysqli_num_rows($checkuser) == true){
 		//gives an error if the name already exists
 		$message = "Username already exists";
-		echo "<p>$message</p><br>
+		echo "<h2>$message</h2><br>
 		<a href = 'index.php'>Go Back</a>";
 	}
 	elseif(mysqli_num_rows($checkemail) == true){
 		//gives an error message if email already registered
 		$message = "This e-mail has already been registered";
-		echo "<p>$message</p><br>
+		echo "<h2>$message</h2><br>
 		<a href = 'index.php'>Go Back</a>";
 	}
 	else{

@@ -12,27 +12,56 @@
 <script src="https://cdn.datatables.net/plug-ins/1.10.21/api/sum().js"></script>
 <link rel= "stylesheet" type = "text/css" href = "custom.css">
 </head>
+
 <body>
 <?php
-
 //the purpose of this page is an addition so that the user can see if their information is right
 include('config.php');
 //uses cookies for the user
 $user = $_COOKIE['firstname'];
 $username = $_COOKIE['username'];
 setcookie('firstname', $user);
-echo "<h1>Welcome, $user</h1>";
 mysqli_select_db($conn, "fitness");
-//displays the link bar
-echo "<ul>
-	<li><a href='userinfo.php'>Your Info</a></li>
-	<li><a href='food.php'>Food Log</a></li>
-	<li><a href='workouts.php'>Workout Log</a></li>
-	<li><a href='index.php'>Log Out</a></li>
-	</ul>";
-
 include('sqlheader.php');
-
 ?>
-</head>
+
+<div class = 'top'>
+<br><br><br><br><br>
+		<div class = "welcome"><?php echo "<h2>  Welcome, $user</h2>"; ?></div>
+		<center>
+		<!--img src ="question.gif"-->
+		<center>
+</div>
+<!--//displays the link bar-->
+<div class = "nbar">
+<nav class="navbar navbar-inverse">
+	  <div class="container-fluid">
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>                        
+		  </button>
+		</div>
+		
+		<div class="collapse navbar-collapse" id="myNavbar">
+		  
+		  <ul class="nav navbar-nav">
+			<li><a href="userinfo.php">Your Info</a></li>
+			<li><a href="food.php">Food Log</a></li>
+			<li><a href="workouts.php">Workout Log</a></li>
+			<li><a href="index.php">Log Out</a></li>
+		  </ul>
+		  
+		  <ul class="nav navbar-nav navbar-right">
+			<li><a href="http://cachemonet.com"><span class="glyphicon glyphicon-heart-empty"></span></a></li>
+			<li><a href="http://beesbeesbees.com"><span class="glyphicon glyphicon-fire"></span></a></li>
+			<li><a href="http://eelslap.com"><span class="glyphicon glyphicon-send"></span></a></li>
+		  </ul>
+		</div>
+	  </div>
+	</nav>	
+	</div>
+
+</body>
 </html>
