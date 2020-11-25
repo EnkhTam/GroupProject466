@@ -8,7 +8,9 @@ Tables added for unit conversion (consql.php)
 Updated weight in userinfo so that it will delete weight logs for duplicate dates 
 Added some styling
 Updated food table to include unit of serving size
+Table headers are invisible, but it IS possible to sort by a column by clicking its header
 
+Could change email register to only accept emails
 Still need to put things in relevant views/public/etc. folders
 Table measurement_conv requires viewing 2 pages to load all 72 rows, but this shouldn't be an issue since 
 	use of site requires going through at least 2 pages
