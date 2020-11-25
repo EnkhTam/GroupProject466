@@ -1,0 +1,108 @@
+﻿
+h1, h2, h4 {
+    font-weight: bold;
+}
+
+.top {
+    background-color: #234f4f;
+    background-image: url("https://img.itch.zone/aW1nLzc5NDMzMy5naWY=/original/7CkIBw.gif");
+    background-size: 100%;
+    background-position-y: 90%;
+    background-repeat: no-repeat;
+    height: 160px;
+}
+
+.welcome {
+    background: inherit;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-filter: invert();
+}
+
+
+.collapse.navbar-collapse {
+    background-image: url("https://i.pinimg.com/originals/ff/06/f6/ff06f6cf89ade0d74d2d7dae6faad970.gif");
+    background-position:center;
+}
+
+.nav.navbar-nav li a, .glyphicon {
+    color: white;
+}
+
+.nav.navbar-nav li a:hover, .glyphicon:hover {
+    color: lightpink;
+}
+
+.login{
+    text-align: center;
+    background: url("https://i.pinimg.com/originals/91/34/9a/91349a8fb89a757e282d0be4e1868cbf.gif");
+    background-size: 200%;
+    background-position-y: 20%;
+    background-position-x:50%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 45%;
+    color: darkslategrey;
+    font-weight: bold;
+}
+    .login input {
+        color: darkslategrey;
+        font-weight: bold;
+    }
+
+
+.register{
+    margin-top: 30px;
+    text-align: center;
+    width: 90%;
+    background: url("https://i.pinimg.com/originals/91/34/9a/91349a8fb89a757e282d0be4e1868cbf.gif");
+    background-size:100%;
+    background-position-y:80%;
+    border-radius: 10px;
+    color:lightgrey;
+    font-weight:bold;
+}
+    .register input {
+        color: lightgrey;
+        font-weight: bold;
+    }
+
+.add form, .info, .add, .log, table, tbody, tr, thead, tfooter{
+    position: center;
+    text-align: center;
+    background-image: url("https://i.pinimg.com/originals/34/d7/a3/34d7a3bbe7ab056f213e66c7182dd57e.gif");
+    border-radius: 10px;
+    width: 75%;
+    background-position: center;
+    background-position-y: 80%;
+    font-weight:bold;
+}
+
+    .info label, .info h2, .info h4, .add label, .add h2, .log label, .log h2, .add form select, .add form input, th, td {
+        background: inherit;
+        -webkit-background-clip: text;
+        color: transparent;
+        -webkit-filter: invert();
+        font-weight: bold;
+    }
+
+        input, select, .add form select option {
+            background: inherit;
+            color: black;
+            font-weight: bold;
+        }
+
+    ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    background: url("https://i.imgur.com/zPnMHQG.gif");
+    background-size: 100%;
+    background-position-x: center;
+    background-attachment: fixed;
+    font-family: arial;
+}
