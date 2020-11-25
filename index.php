@@ -3,9 +3,18 @@
 <head>
 <title>Greetings, Traveler</title>
 <link rel= "stylesheet" type = "text/css" href = "custom.css">
+<style>
+.indexbody{
+	background-image: url("https://data.whicdn.com/images/321306780/original.gif");
+	background-size:100%;
+	height: 100vh;
+	margin-top:-20px;
+}
+</style>
 </head>
 
 <body>
+<div class = indexbody>
 <center>
 <?php include('sqlheader.php');?>
 
@@ -43,6 +52,7 @@
 	<input type = "submit">
 	<p name = 'result'></p>
 	</form>
+</div>
 </div>
 </body>
 </html>

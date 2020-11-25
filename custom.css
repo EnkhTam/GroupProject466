@@ -5,9 +5,9 @@ h1, h2, h4 {
 
 .top {
     background-color: #234f4f;
-    background-image: url("https://img.itch.zone/aW1nLzc5NDMzMy5naWY=/original/7CkIBw.gif");
+    background-image: url("https://steamuserimages-a.akamaihd.net/ugc/780726501349348485/1C23C9A5544D13D88BC1DEF811C025250B5149BE/");
     background-size: 100%;
-    background-position-y: 90%;
+    background-position-y: 10%;
     background-repeat: no-repeat;
     height: 160px;
 }
@@ -21,8 +21,8 @@ h1, h2, h4 {
 
 
 .collapse.navbar-collapse {
-    background-image: url("https://i.pinimg.com/originals/ff/06/f6/ff06f6cf89ade0d74d2d7dae6faad970.gif");
-    background-position:center;
+    background-image: url("https://i.pinimg.com/originals/ef/37/57/ef375738b5d3cc1bd9216f86c58148a9.gif");
+    background-position: center;
 }
 
 .nav.navbar-nav li a, .glyphicon {
@@ -67,15 +67,23 @@ h1, h2, h4 {
         font-weight: bold;
     }
 
-.add form, .info, .add, .log, table, tbody, tr, thead, tfooter{
+.add form, .info, .add, .log, table, tbody, tr, thead, tfooter {
     position: center;
     text-align: center;
-    background-image: url("https://i.pinimg.com/originals/34/d7/a3/34d7a3bbe7ab056f213e66c7182dd57e.gif");
+    /*background-image: url("https://steamuserimages-a.akamaihd.net/ugc/939458259773568994/526D263D0B0A1ECC8DB638F7AD7A88D426645E03/");
+    */
+    background-image: url("https://pa1.narvii.com/7545/679546f2664e1fcf4d66bcad6d13aa0c11923545r1-500-300_hq.gif");
     border-radius: 10px;
     width: 75%;
     background-position: center;
     background-position-y: 80%;
-    font-weight:bold;
+    font-weight: bold;
+}
+.add form{
+    background-repeat:no-repeat;
+}
+.add{
+    background:transparent;
 }
 
     .info label, .info h2, .info h4, .add label, .add h2, .log label, .log h2, .add form select, .add form input, th, td {
@@ -100,9 +108,9 @@ h1, h2, h4 {
 }
 
 body {
-    background: url("https://i.imgur.com/zPnMHQG.gif");
-    background-size: 100%;
+    background: url("https://i.pinimg.com/originals/6e/b4/ac/6eb4ac426bd7a0d441b53344550bc7f0.gif");
     background-position-x: center;
+    background-position-y:100%;
     background-attachment: fixed;
     font-family: arial;
 }
