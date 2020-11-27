@@ -1,0 +1,32 @@
+Cleaned up the code a ton and updated
+
+RECENT FIXES:
+Removed use of prepare statements, otherwise dates would submit as 0000-00-00 
+	despite being submitted the same format as the db
+Food log table shows nutrition info of servings consumed by doing math on-page
+Workouts table shows averages and totals for cals burned by doing math on-page
+Tables added for unit conversion (consql.php)
+Updated weight in userinfo so that it will delete weight logs for duplicate dates 
+Added some styling
+Updated food table to include unit of serving size
+Fixed table headers
+Added favicon, cursor, some titles
+Email field must be in email format at least
+If registered user exists and all info the same, just log in
+If change password matches old passwords, ask if they're sure
+Added ability to reset password thru email (but that can't work on the school server) or for our situation, a form
+Added security questions to use with password reset
+
+OTHER NOTES:
+Still need to put things in relevant views/public/etc. folders
+Table measurement_conv requires viewing 2 pages to load all 72 rows, but this shouldn't be an issue since 
+	use of site requires going through at least 2 pages
+Add page titles, audios when updating styling
+Still haven't rlly implemented unit conversion bc idk what we're supposed to use it for
+Might change workouts implementation to be like food:
+	a table of workout types with [cals burned per time] instead of [nutrition info per serving] 
+	and a separate table for workout logging
+Update workout to include intensity and duration
+
+Now configured for my mariadb
+See sqlheader.php and consql.php for current database and table usage/creation

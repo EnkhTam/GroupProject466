@@ -1,0 +1,170 @@
+﻿html {
+    cursor: url("cursor.gif"), auto;
+}
+h1, h2, h4 {
+    font-weight: bold;
+    cursor: url("cursor.gif"), auto;
+}
+
+.top {
+    background-color: #234f4f;
+    background-image: url("https://steamuserimages-a.akamaihd.net/ugc/780726501349348485/1C23C9A5544D13D88BC1DEF811C025250B5149BE/");
+    background-size: 100%;
+    background-position-y: 10%;
+    background-repeat: no-repeat;
+    height: 160px;
+    cursor: url("cursor.gif"), auto;
+}
+
+.welcome {
+    background: inherit;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-filter: invert();
+}
+
+.navbar-inverse {
+    cursor: url("cursor.gif"), auto;
+}
+
+
+.collapse.navbar-collapse {
+    background-image: url("https://i.pinimg.com/originals/ef/37/57/ef375738b5d3cc1bd9216f86c58148a9.gif");
+    background-position: center;
+    cursor: url("cursor.gif"), auto;
+}
+
+.nav.navbar-nav li a, .glyphicon {
+    color: white;
+    cursor: url("cursor.gif"), auto;
+}
+
+    .nav.navbar-nav li a:hover, .glyphicon:hover {
+        color: lightpink;
+        cursor: url("cursor.gif"), auto;
+    }
+
+.login {
+    text-align: center;
+    background: url("https://i.pinimg.com/originals/91/34/9a/91349a8fb89a757e282d0be4e1868cbf.gif");
+    background-size: 200%;
+    background-position-y: 20%;
+    background-position-x: 50%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 45%;
+    color: darkslategrey;
+    font-weight: bold;
+    cursor: url("cursor.gif"), auto;
+}
+
+.register {
+    margin-top: 30px;
+    text-align: center;
+    width: 90%;
+    background: url("https://i.pinimg.com/originals/91/34/9a/91349a8fb89a757e282d0be4e1868cbf.gif");
+    background-size: 100%;
+    background-position-y: 80%;
+    border-radius: 10px;
+    color: lightgrey;
+    font-weight: bold;
+    cursor: url("cursor.gif"), auto;
+}
+
+table tbody{
+    color:aquamarine;
+}
+.add form, .info, .log, table, tbody, tr, thead tr, tfooter, .dataTables_filter, .dataTables_wrapper .dataTables_paginate {
+    position: center;
+    text-align: center;
+    /*background-image: url("https://steamuserimages-a.akamaihd.net/ugc/939458259773568994/526D263D0B0A1ECC8DB638F7AD7A88D426645E03/");
+    */
+    width: 75%;
+    background-image: url("https://64.media.tumblr.com/d36add3232718f5cf30cbc2183694f9e/bbfbba568a57eeb5-b8/s540x810/fdeba1e9a8cfee7f79bda9ebba968ed8294481f8.gifv");
+    border-radius: 10px;
+    background-size: 200%;
+    background-position-y: 50%;
+    background-position-x: 30%;
+    font-weight: bold;
+    cursor: url("cursor.gif"), auto;
+}
+    .add form {
+        background-repeat: no-repeat;
+        cursor: url("cursor.gif"), auto;
+    }
+.add {
+    /*background: transparent;*/
+    cursor: url("cursor.gif"), auto;
+}
+
+    .info label, .info h2, .info h4, .add label,
+    .add h2, .log label, .log h2, .add form select, .add form input,
+    thead, td, tfoot tr th, thead tr th, .dataTables_filter label,
+    .dataTables_wrapper .dataTables_paginate .paginate_button.disabled, 
+    .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover, 
+    .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active {
+        background: inherit !important;
+        -webkit-background-clip: text !important;
+        color: transparent !important;
+        -webkit-filter: invert() !important;
+        font-weight: bold;
+        cursor: url("cursor.gif"), auto;
+    }
+
+        input{
+            background: inherit !important;
+            -webkit-background-clip: text !important;
+            color: transparent !important;
+            font-weight: bold;
+            
+            cursor: url("cursor.gif"), auto;
+        }
+.log .dataTables_length label {
+    background-image: url("https://64.media.tumblr.com/d36add3232718f5cf30cbc2183694f9e/bbfbba568a57eeb5-b8/s540x810/fdeba1e9a8cfee7f79bda9ebba968ed8294481f8.gifv") !important;
+}
+.dataTables_length select {
+    background: inherit !important;
+    -webkit-background-clip: text !important;
+    color: inherit;
+    
+    font-weight: bold;
+    cursor: url("cursor.gif"), auto;
+}
+
+th {
+    background: inherit !important;
+    -webkit-background-clip: text !important;
+    color: transparent !important;
+    -webkit-filter: invert() !important;
+    font-weight: bold;
+    cursor: url("cursor.gif"), auto;
+}
+
+.register input, .regadd input {
+    color: lightgrey !important;
+    font-weight: bold;
+    cursor: url("cursor.gif"), auto;
+}
+
+.login input, option {
+    color: darkslategrey !important;
+    font-weight: bold;
+    cursor: url("cursor.gif"), auto;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    cursor: url("cursor.gif"), auto;
+}
+
+body {
+    background: url("https://i.pinimg.com/originals/6e/b4/ac/6eb4ac426bd7a0d441b53344550bc7f0.gif");
+    background-position-x: center;
+    background-position-y: 100%;
+    background-attachment: fixed;
+    font-family: arial;
+    cursor: url("cursor.gif"), auto;
+}
