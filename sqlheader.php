@@ -45,6 +45,10 @@ mysqli_query($conn, "CREATE TABLE security_questions(
 )");
 mysqli_query($conn, "INSERT INTO security_questions(sq_id, sq_text)
 			VALUES('1', 'What is your favorite pokemon?')");
+mysqli_query($conn, "INSERT INTO security_questions(sq_id, sq_text)
+			VALUES('2', 'Who or what is your favorite Rick & Morty character?')");
+mysqli_query($conn, "INSERT INTO security_questions(sq_id, sq_text)
+			VALUES('3', 'What is your social security number?')");
 
 mysqli_query($conn, "CREATE TABLE sq_user(
 	squ_id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
@@ -155,7 +159,10 @@ mysqli_query($conn, "CREATE TABLE workoutlogs(
 )");
 mysqli_query($conn, "INSERT INTO workoutlogs (wolog_id, user_id, workout_name, workout_date, calories_burned)
 			VALUES ('1','1','idk','2010-01-01','1','1','1')");
-
+//NOTE-- All inserted data before this line are not meant to provide a functional experience
+//	except for like security_questions I guess
+//include sample data file
+include('sampledata.php');
 ?>
 </head>
 </html>

@@ -48,7 +48,7 @@ echo'<div class = "row">
 		$WSet = ($_POST["WSet"]);
 		$MSet = ($_POST["MSet"]);
 
-		mysqli_query($conn, "DELETE FROM settings WHERE user_id = '$use'");
+		mysqli_query($conn, "DELETE FROM settings WHERE user_id = $use");
 		mysqli_query($conn, "INSERT INTO settings (user_id, wset_id, mset_id)
 					VALUES ('$use','$WSet','$MSet')");
 		echo "<h3>".$WSet."</h3>";

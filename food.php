@@ -174,7 +174,7 @@ $result = mysqli_query($conn,$sql);
 		$prot = $row['protein'] * $row['servings'];
 		$carbs = $row['carbs'] * $row['servings'];
 		$fiber = $row['fiber'] * $row['servings'];
-		if($srow['wset_id'] != 28)
+		if($srow['mset_id'] != 28)
 			{
 				$displayres = mysqli_query($conn, "SELECT * FROM measurement_conv
 											WHERE from_unit_id = 28 AND to_unit_id = '".$srow['mset_id']."'");
@@ -182,8 +182,9 @@ $result = mysqli_query($conn,$sql);
 				$prot = ($prot*$displayrow['mult'])/$displayrow['divi'];
 				$carbs = ($carbs*$displayrow['mult'])/$displayrow['divi'];
 				$fiber = ($fiber*$displayrow['mult'])/$displayrow['divi'];
+				echo "<h2>".$srow['user_id']."</h2>";
 			}
-		else if($srow['wset_id'] == 28){
+		else if($srow['mset_id'] == 28){
 		}
 		$table .= "<tr> <td>".$row['eaten_date']."</td> <td>".$row['food_name']."</td><td>".$row['servings']."</td> <td>".$cals."</td><td>".$prot."</td><td>".$carbs."</td><td>".$fiber."</td> </tr>";
 	}
@@ -198,7 +199,7 @@ $result = mysqli_query($conn,$sql);
 	<h2>Add Food Log</h2>
 	<label>Food Name: </label>
 	<?php
-	$fsql = mysqli_query($conn, "SELECT food_id, food_name FROM food");
+	$fsql = mysqli_query($conn, "SELECT food_id, food_name FROM food WHERE food_id > 1");
 	echo "<select name ='Ffood_id'>";
 	while($frow = mysqli_fetch_assoc($fsql)){
 		echo "<option value='".$frow['food_id']."'>".$frow['food_name']."</option>";

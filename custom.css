@@ -38,11 +38,13 @@ h1, h2, h4 {
 
 .nav.navbar-nav li a, .glyphicon {
     color: white;
+    font-weight:bold;
     cursor: url("cursor.gif"), auto;
 }
 
     .nav.navbar-nav li a:hover, .glyphicon:hover {
         color: lightpink;
+        font-weight: bold;
         cursor: url("cursor.gif"), auto;
     }
 
