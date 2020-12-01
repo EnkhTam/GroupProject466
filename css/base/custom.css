@@ -1,0 +1,198 @@
+﻿html {
+    cursor: url("../../media/img/base/cursor.gif"), auto;
+}
+
+@font-face {
+    font-family: 'RubberNippleFactory';
+    src: url('fonts/rubbernipplefactory.ttf') format('woff'), url('fonts/rubbernipplefactory.ttf') format('truetype');
+}
+
+h1, h2, h4 {
+    font-weight: bold;
+    cursor: url("../../media/img/base/cursor.gif"), auto;
+}
+
+.top {
+    background-color: #234f4f;
+    /*background-image: url("https://steamuserimages-a.akamaihd.net/ugc/780726501349348485/1C23C9A5544D13D88BC1DEF811C025250B5149BE/");
+   */
+    background-image: url("https://blog.bonsecours.com/wp-content/uploads/2020/01/BSC_HealthyPlate_1200x628_Revised-1200x610.jpg");
+    background-size: 100%;
+    background-position-y: 10%;
+    background-repeat: no-repeat;
+    height: 160px;
+    cursor: url("../../media/img/base/cursor.gif"), auto;
+}
+
+.welcome {
+    background: inherit;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-stroke: 1px black;
+    -webkit-filter: invert();
+}
+
+.navbar-inverse {
+    /*background-image: url("https://i.pinimg.com/originals/ef/37/57/ef375738b5d3cc1bd9216f86c58148a9.gif");
+    /**/ background-image: url("https://images.squarespace-cdn.com/content/v1/551a19f8e4b0e8322a93850a/1602020393443-L6M0DGZK4C75DRNR7GZH/ke17ZwdGBToddI8pDm48kGVAqUhYrGdhEGudzFls7K1Zw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PI3qfRO8hJhbvfRCvNhjqrGe-PfXgVTpsvEoluIBTyvM0/Title_Animation.gif");
+    background-position: center;
+    background-size:45%;
+    cursor: url("../../media/img/base/cursor.gif"), auto;
+}
+
+
+.collapse.navbar-collapse {
+   /* background-image: url("https://i.pinimg.com/originals/ef/37/57/ef375738b5d3cc1bd9216f86c58148a9.gif");
+    // background-image: url("https://images.squarespace-cdn.com/content/v1/551a19f8e4b0e8322a93850a/1602020393443-L6M0DGZK4C75DRNR7GZH/ke17ZwdGBToddI8pDm48kGVAqUhYrGdhEGudzFls7K1Zw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PI3qfRO8hJhbvfRCvNhjqrGe-PfXgVTpsvEoluIBTyvM0/Title_Animation.gif");
+   */background-position: center;
+    cursor: url("../../media/img/base/cursor.gif"), auto;
+}
+
+.nav.navbar-nav li a, .glyphicon {
+    color: white;
+    font-weight: bold;
+    font-size: 25px !important;
+    cursor: url("../../media/img/base/cursor.gif"), auto;
+    -webkit-text-stroke: 1px cornflowerblue;
+}
+
+    .nav.navbar-nav li a:hover, .glyphicon:hover {
+        color: lightpink;
+        font-weight: bold;
+        font-size: 25px !important;
+        cursor: url("../../media/img/base/cursor.gif"), auto;
+        -webkit-text-stroke: 1px white;
+    }
+
+.login {
+    text-align: center;
+    background: url("https://i.pinimg.com/originals/91/34/9a/91349a8fb89a757e282d0be4e1868cbf.gif");
+    background-size: 200%;
+    background-position-y: 20%;
+    background-position-x: 50%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 45%;
+    color: darkslategrey;
+    font-weight: bold;
+    cursor: url("../../media/img/base/cursor.gif"), auto;
+}
+
+.register {
+    margin-top: 30px;
+    text-align: center;
+    width: 90%;
+    background: url("https://i.pinimg.com/originals/91/34/9a/91349a8fb89a757e282d0be4e1868cbf.gif");
+    background-size: 100%;
+    background-position-y: 80%;
+    border-radius: 10px;
+    color: lightgrey;
+    font-weight: bold;
+    cursor: url("../../media/img/base/cursor.gif"), auto;
+}
+
+table tbody{
+    color:aquamarine;
+}
+.add form, .info, .log, table, tbody, tr, thead tr, tfooter, .dataTables_filter, .dataTables_wrapper .dataTables_paginate {
+    position: center;
+    text-align: center;
+    /*background-image: url("https://steamuserimages-a.akamaihd.net/ugc/939458259773568994/526D263D0B0A1ECC8DB638F7AD7A88D426645E03/");
+    */
+    width: 75%;
+    /*background-image: url("https://64.media.tumblr.com/d36add3232718f5cf30cbc2183694f9e/bbfbba568a57eeb5-b8/s540x810/fdeba1e9a8cfee7f79bda9ebba968ed8294481f8.gifv");
+     background-image: url("https://i.pinimg.com/originals/b2/99/84/b299848511c81d98cc5b361c8af506de.gif");
+    background-image: url("https://i.pinimg.com/originals/e3/16/24/e316245cbb4f4b96ec0cef2b36a46b12.gif");
+    */background-image: url("https://i.pinimg.com/originals/da/00/25/da0025614f7a00c6b7f0788d1b596bc4.gif");
+    border-radius: 10px;
+    /*background-size: 200%;*/
+    background-position:center;
+    /*background-position-y: 50%;
+    background-position-x: 30%;*/
+    font-weight: bold;
+    cursor: url("../../media/img/base/cursor.gif"), auto;
+}
+    .add form {
+        /*background-repeat: no-repeat;*/
+        cursor: url("../../media/img/base/cursor.gif"), auto;
+        border-radius:10px;
+    }
+.add {
+    border-radius: 10px;
+    width:100%;
+    /*background: transparent;*/
+    cursor: url("../../media/img/base/cursor.gif"), auto;
+}
+
+    .info label, .info h2, .info h4, .add label,
+    .add h2, .log label, .log h2, .add form select, .add form input,
+    thead, td, tfoot tr th, thead tr th, .dataTables_filter label,
+    .dataTables_wrapper .dataTables_paginate .paginate_button.disabled, 
+    .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover, 
+    .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active {
+        background: inherit !important;
+        -webkit-background-clip: text !important;
+        color: transparent !important;
+        -webkit-filter: invert() !important;
+        font-weight: bold;
+        cursor: url("../../media/img/base/cursor.gif"), auto;
+    }
+
+        input{
+            background: inherit !important;
+            -webkit-background-clip: text !important;
+            color: transparent !important;
+            font-weight: bold;
+            
+            cursor: url("../../media/img/base/cursor.gif"), auto;
+        }
+.log .dataTables_length label {
+    /*background-image: url("https://64.media.tumblr.com/d36add3232718f5cf30cbc2183694f9e/bbfbba568a57eeb5-b8/s540x810/fdeba1e9a8cfee7f79bda9ebba968ed8294481f8.gifv") !important;*/
+    background-image url("https://blog.bonsecours.com/wp-content/uploads/2020/01/BSC_HealthyPlate_1200x628_Revised-1200x610.jpg" !important);
+}
+.dataTables_length select {
+    background: inherit !important;
+    -webkit-background-clip: text !important;
+    color: inherit;
+    font-weight: bold;
+    cursor: url("../../media/img/base/cursor.gif"), auto;
+}
+
+th {
+    background: inherit !important;
+    -webkit-background-clip: text !important;
+    color: transparent !important;
+    -webkit-filter: invert() !important;
+    font-weight: bold;
+    cursor: url("../../media/img/base/cursor.gif"), auto;
+}
+
+.register input, .regadd input {
+    color: lightgrey !important;
+    font-weight: bold;
+    cursor: url("../../media/img/base/cursor.gif"), auto;
+}
+
+.login input, option, h3 form input {
+    color: darkslategrey !important;
+    font-weight: bold;
+    cursor: url("../../media/img/base/cursor.gif"), auto;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    cursor: url("../../media/img/base/cursor.gif"), auto;
+}
+
+body {
+    /*background: url("https://i.pinimg.com/originals/6e/b4/ac/6eb4ac426bd7a0d441b53344550bc7f0.gif");*/
+    background: url("https://images.all-free-download.com/images/graphiclarge/competitive_life_background_rushing_action_colorful_silhouette_decor_6827907.jpg");
+    background-position-x: center;
+    background-position-y: 100%;
+    background-attachment: fixed;
+    font-family: 'RubberNippleFactory';
+    cursor: url("../../media/img/base/cursor.gif"), auto;
+}
