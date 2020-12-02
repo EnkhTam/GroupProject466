@@ -1,0 +1,29 @@
+RECENT FIXES/CHANGES/UPDATES:
+If registered user exists and all info the same, just log in
+If change password matches old passwords, tells them it was previously used and updates
+Added ability to reset password thru email (but that can't work on the school server) or for our situation, a form
+Added security questions to use with password reset
+Added display settings for nutrient and weight measurements utilizing unit conversion tables
+Added a pong game bc why not
+'settings' table integrated and consolidated into user table
+Organized files into proper folders
+
+OTHER NOTES:
+Could user reset password from userinfo page
+Nothing's encrypted yet lol oops
+Updated workout to include duration but hasn't been tested yet
+Still need to put things in relevant views/public/etc. folders
+Table measurement_conv requires viewing 2 pages to load all 72 rows, but this shouldn't be an issue since 
+	use of site requires going through at least 2 pages
+Add page titles, audios when updating styling
+Could change workouts implementation to be like food:
+	a table of workout types with [cals burned per time] instead of [nutrition info per serving] 
+	and a separate table for workout logging
+
+Cookies secretly like ever expire lol
+
+Now configured for my mariadb but I'm gonna leave my phpmyadmin config in
+See php/includes/sqlheader.php and php/includes/consql.php for current database and table usage/creation
+SQL script is automatically run on site opening so that given someone's changed config.php for
+	their own dbhost and a few tweaks here and there, the site should run on anything with minimal 
+	issue and no manual database scripting necessary
